@@ -44,10 +44,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  
     [SPACEFN] = KEYMAP(
         KC_GRV,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  KC_DEL,  \
-        KC_TRNS, KC_HOME, KC_UP,   KC_END,  KC_PGUP, KC_NO,   KC_NO,   KC_HOME, KC_UP,   KC_END,  KC_PGUP, KC_SLCK, KC_PAUS, KC_CAPS,  \
+        KC_TRNS, KC_HOME, KC_UP,   KC_END,  KC_PGUP, KC_NO,   KC_NO,   KC_HOME, KC_UP,   KC_END,  KC_PGUP, KC_SLCK, KC_PAUS, KC_TRNS,  \
         KC_TRNS, KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN, KC_NO,   KC_NO,   KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN, KC_TRNS,       KC_PENT, \
         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_NO,   KC_NO,   KC_NO,   KC_VOLD, KC_VOLU, KC_NO,                  KC_TRNS, \
-        KC_TRNS, KC_TRNS, KC_TRNS,             KC_TRNS,                         KC_TRNS, KC_MPRV, KC_MPLY, KC_MNXT),
+        KC_CAPS, KC_TRNS, KC_TRNS,             KC_TRNS,                         KC_TRNS, KC_MPRV, KC_MPLY, KC_MNXT),
 
     [LED] = KEYMAP(
         KC_NO,  F(1),   F(2),   F(3),   F(4),   F(5),   F(6),   F(7),   F(8),   KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO, \
