@@ -13,6 +13,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include "kc60.h"
+#include "keymap_common.h"
 
 #define BASE    0 // default layer
 #define SPACEFN 1 // space fn layer
@@ -39,7 +40,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         MT(MOD_LCTL, KC_ESC), KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,           KC_ENT,  \
 
         KC_LSPO, KC_Z,        KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH,                    KC_RSPC, \
-        KC_LCTL, KC_LGUI,     KC_LALT,             F(9),                                              KC_RALT, MO(LED), KC_APP,  KC_RCTL),
+        KC_LCTL, KC_LGUI,     KC_LALT,             LT(SPACEFN, KC_SPACE),                             KC_RALT, MO(LED), KC_APP,  KC_RCTL),
  
     [SPACEFN] = KEYMAP(
         KC_GRV,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  KC_DEL,  \
@@ -90,8 +91,6 @@ const uint16_t PROGMEM fn_actions[] = {
   [7]  = ACTION_NO,
   [8]  = ACTION_NO,
 #endif
-  [9]  = ACTION_LAYER_TAP_KEY(SPACEFN, KC_SPACE),    /* SpaceFn layout 1 */
-  [10] = ACTION_LAYER_TAP_KEY(SPACEFN, KC_ESC),      /* Momentary layout 1 */
 };
 
 #define MODS_CTRL_MASK  (MOD_BIT(KC_LSHIFT)|MOD_BIT(KC_RSHIFT))
